@@ -5,18 +5,40 @@
 	<link rel="stylesheet" href="main.css">
 	<script type="text/javascript" src="jquery-2.1.4.js"></script>
 	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	 <script type="text/javascript" src="bower_components/handlebars/handlebars.js"></script>
+	 <script type="text/x-handlebars-template" id="list-item-template">
+	// <!-- // 	<li class="form-group">
+	// // 		<div class="input-group">
+	// // 			<span class="input-group-addon">
+	// // 				<input type="checkbox" aria-label="...">
+	// // 			</span>
+	// // 			<input type="text" value="{{this}}" class="form-control" aria-label="...">
+	// // 		</div>
+	// // 		<input type="number">
+	// // 	</li>
+		</script> 
 	<title>Shopping List</title>
 </head>
 <body>
-
+	
 	<header>
 		<img class="logo" img src="./images/Shopping_logo.png" ></img>
 		<!-- <h1>Shopping List</h1> -->
 		<h2>By Keegan Ariel</h2>
 	</header>
-	<main>
-		<input id="typehere" type="text">
-		<button id="add">Add</button>
+	<main class="container-fluid">
+		<!-- <input id="typehere" type="text"> -->
+		<div class="row">
+			<form class="form-horizontal">
+				<div class="form-group form-group-lg">
+					<div class="col-sm-10">
+					<input class="form-control" type="text" id="typehere" placeholder="Don't Forget to Buy:" name="item">
+					</div>
+					<input type="submit" class="btn btn-primary btn-lg col-sm-2" id="add" value="Add">
+				</div>
+			</form>
+		</div>
 		<ul class="list">
 			<!-- <li><input type="checkbox">Pizza<input type="number"></li> -->
 		</ul>

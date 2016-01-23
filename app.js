@@ -1,21 +1,18 @@
 $( document ).ready(function() {
-	$("#add").click(function() {
+	$("form").submit(function(event) {
 		var maininput = $("#typehere").val();
 		console.log(maininput);
 		if (maininput !== '') {
+			// var template = Handlebars.compile($('#list-item-template').html());
+			// $("ul").append(template(maininput));
 			$("ul").append('<li><input type="checkbox">' + maininput + '<input type="number"></li>');
 			$('#typehere').val('');
 		}
+		event.preventDefault();
 	});
 
-	$('[type="checkbox"]').click(function(){
-		var element = $(this).maininput();
-			if ($(this).is(':checked'))
-				  { element.wrap('<del>');
-				  } else {
-				  element.unwrap('<del>');
-					}
-		});
 
-
+	$('.list').on ('click', '[type=checkbox]', function(){
+		$(this).parent().toggleClass('purchased');
+	});
 });
