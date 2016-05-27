@@ -1,25 +1,70 @@
 body {
 	font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+	max-width: 100em;
 }
 
 .container-fluid {
 	max-width: 55em;
 }
 
+.top, .bottom, .left, .right {
+  background: gray;
+  position: fixed;
+}
+
+.left, .right {
+  top: 0; 
+  bottom: 0;
+  width: 1em;
+}
+
+.left { 
+  left: 0; 
+}
+
+.right { 
+  right: 0; 
+}
+
+.top, .bottom {
+  left: 0; 
+  right: 0;
+  height: 1em;
+}
+
+.top { 
+  top: 0; 
+}
+
+.bottom { 
+  bottom: 0; 
+}
+
+.logo {
+  height: 20em;
+}
+
+.logoDiv {
+ margin-left: -2.2em;
+
+}
+
 header {
 	background-color: gray;
 	text-align: center;
+<<<<<<< HEAD
 	width: 35em;
 	border-radius: 2.5em;
+=======
+	width: 19em;
+    height: 19em;
+	border-radius: 25px;
+>>>>>>> gh-pages
 	margin: auto;
 	margin-top: 4em;
 
 }
 
-.logo {
-	width: 25em;
-	margin: 0;
-}
 
 h1 {
 	font-size: 2em;
@@ -39,16 +84,24 @@ header h2 {
 }
 
 .form-horizontal {
-	padding-top: 8em;
+	padding-top: 5em;
+}
+.form-control {
+	margin-bottom: 2em;
+	font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+	margin-left: 4em;
+
 }
 
-/*main {
-	text-align: center;
-	width: 960px;
-	margin: auto;
-	padding-top: 4em;
+.form-group-lg .form-control {
+	width: 80%;
+	margin-right: -1em;
+}
 
-}*/
+.col-sm-10 {
+    margin-right: -4em;
+}
+
 
 
 #add {
@@ -67,8 +120,12 @@ header h2 {
 
 input {
 	width: 2.5em;
-	font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
-	
+	font-family: Futura, 'Trebuchet MS', Arial, sans-serif;	
+}
+
+.bought {
+	text-align: center;
+	color: dimgray;
 }
 
 input[type=number] {
@@ -84,10 +141,6 @@ input[type=checkbox] {
 
 }
 
-.form-control {
-	margin-bottom: 2em;
-	font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
-}
 
 main ul {
 	padding: 0;
@@ -108,3 +161,19 @@ main li {
 .purchased { 
 	text-decoration: line-through; 
 }
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+    margin-top: -3em;
+}
+
+#gitIcon {
+  color: darkgray;
+}
+
+#infoIcon {
+  color: darkgray;
+}
+
