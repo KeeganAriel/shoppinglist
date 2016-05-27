@@ -1,18 +1,21 @@
+
+
 $( document ).ready(function() {
+
+var source = $("#list-item-template").html();
+var listItemTemplate = Handlebars.compile(source);
+
 // add items to shopping list
 	$("form").submit(function(event) {
 		var maininput = $("#typehere").val();
 		if (maininput !== '') {
-
-			$("ul").append('<li><input type="checkbox">' + maininput + '<input type="number"></li>');
+			$("ul").append(listItemTemplate(maininput));
+			//clear maininput
 			$('#typehere').val('');
-
 		
-		var source = $("#list-item-template").html();
-		var template = Handlebars.compile(source);
 
-			$("ul").append(template(maininput));
-			$('#typehere').val(''); //clear maininput
+
+
 		}
 		var count = $('.list li').length;
 		$('.item-count').text(count);
