@@ -188,11 +188,10 @@ header h2 {
   }
 
   .purchased:before { 
-  	    content: " ";
+  	content: " ";
     position: absolute;
     border: 1px solid #111;
     width: 10em;
-    /* display: flex; */
     justify-content: center;
     align-items: center;
     margin-top: 0.85em;
