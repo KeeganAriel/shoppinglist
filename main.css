@@ -153,6 +153,12 @@ main li {
 
 }
 
+.trash {
+	margin-left: 1em;
+	margin-bottom: .4em !important; 
+	background-color: lightgrey !important;
+}
+
 .purchased { 
 	text-decoration: line-through; 
 }

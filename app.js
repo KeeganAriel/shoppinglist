@@ -30,7 +30,10 @@ var listItemTemplate = Handlebars.compile(source);
 		$('.bought-item').text(count);
 	});
 
-
+	// remove li on click of button
+	$('.list').on('click', '.btn-default', function(){
+ 		$(this).closest('li').remove();
+	});
 
 		
 
