@@ -32,9 +32,10 @@ var listItemTemplate = Handlebars.compile(source);
 
 	// remove li on click of button
 	$('.list').on('click', '.btn-default', function(){
- 		$(this).closest('li').remove();
+ 		$(this).parent().remove();
 	});
 
+	// add uncheck button?
 		
 
 });
