@@ -4,6 +4,13 @@ $( document ).ready(function() {
 
 var source = $("#list-item-template").html();
 var listItemTemplate = Handlebars.compile(source);
+var updateCount = function() {
+		var count = $("input[type=checkbox]:checked").length;
+		$('.bought-item').text(count);
+		var amount = $('.list li').length;
+		$('.item-count').text(amount);
+
+};
 
 // add items to shopping list
 	$("form").submit(function(event) {
@@ -12,13 +19,12 @@ var listItemTemplate = Handlebars.compile(source);
 			$("ul").append(listItemTemplate(maininput));
 			//clear maininput
 			$('#typehere').val('');
-		
+			updateCount();
 
 
 
 		}
-		var count = $('.list li').length;
-		$('.item-count').text(count);
+
 
 		event.preventDefault();
 	});
@@ -26,13 +32,13 @@ var listItemTemplate = Handlebars.compile(source);
 // checks items off in the shopping list
 	$('.list').on ('click', '[type=checkbox]', function(){
 		$(this).parent().toggleClass('purchased');
-		var count = $("input[type=checkbox]:checked").length;
-		$('.bought-item').text(count);
+		updateCount();
 	});
 
 	// remove li on click of button
 	$('.list').on('click', '.btn-default', function(){
  		$(this).parent().remove();
+ 		updateCount();
 	});
 
 	// add uncheck button?
